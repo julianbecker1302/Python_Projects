@@ -7,9 +7,9 @@ driver = webdriver.Chrome("/snap/bin/chromium.chromedriver")
 songlist=[]
 
 
-with open("songlist.txt","r") as file:
+with open("ssiosongs.txt","r") as file:
     for line in file:
-        songlist.append(line[:-1] + ", Kollegah")
+        songlist.append(line[:-1] + ", SSIO")
 
 
 
@@ -19,7 +19,6 @@ for song in songlist:
     textbox.send_keys(song)
     sendebutton = driver.find_element_by_xpath("//div[@jsname='M2UYVd']")
     sendebutton.click()
-    time.sleep(2)
 
 
 
