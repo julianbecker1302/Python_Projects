@@ -15,4 +15,4 @@ with open ("eminem_songs.txt", "w") as file:
     for i in range(500):
         tr = td.findNext("tr")
         td = tr.findNext("td", text=True)
-        file.write(str(td)[4:-5])
+        file.write(str(td)[4:-5])  #remove html-tags
