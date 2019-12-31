@@ -15,7 +15,7 @@ Including scraping scripts for songs of Kollegah and Eminem.
 Sorry robin...
 
 
-## ekrscript
+## ekr_script
 
 A script for auto reposting and ad on ebay-kleinanzeigen(like craigslist for germany).
 This makes sure that people see your ad more often.
