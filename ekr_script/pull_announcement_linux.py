@@ -17,30 +17,43 @@ for line in pic_list.find_all("img"):
 
 print("------------------------------------------------------------------------")
 print('Beginning to download the the ad images...\n')
+
+
 for i in range(len(pic_links)):
     print("Download " + link +"...")
     urllib.request.urlretrieve(pic_links[i], os.getcwd()+"/resources/pic" + str(i+1)+".jpg")       #works for linux filesystem!!!
-                                                                                                #not windows!!
+
+                                                                                            #not windows!!
 print("\nImages downloaded\n")
 print("------------------------------------------------------------------------")
 print("Extracting ad title...\n")
 
+
 title = soup.find(id="viewad-title")
 with open(os.getcwd()+"/resources/infos.txt", "w") as file:
     file.write(title.text.strip()+"\n")
+
+
     print("Title:\n" +title.text.strip())
     print("\nTitle file created\n")
     print("------------------------------------------------------------------------")
     print("Extracting ad description...\n")
 
+
     description = soup.find(id="viewad-description-text")
     file.write(description.text.strip()+"\n")
+
+
     print("Text:\n" +description.text.strip())
     print("\nDescription file created")
     print("------------------------------------------------------------------------")
     print("Extracting price...\n")
+
+
     price_text = soup.find(id="viewad-price").text.strip().split()
     price = price_text[1]
+
+
     print(price)
     print("\nPrice extracted")
     file.write(price)
