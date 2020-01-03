@@ -1,9 +1,10 @@
 
 import sys
 
-login = "B4aC"
+login = "Z4aC"
 
 l=[]
+
 with open("list.txt","r") as file:
     for line in file:
         l.append(line[:-1])
